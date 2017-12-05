@@ -11726,7 +11726,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11749,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11771,11 +11773,12 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;">&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;<a class="anchor-link" href="#&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;">&#194;&#182;</a></h1><h2 id="&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;">&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;<a class="anchor-link" href="#&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;">&#194;&#182;</a></h2><h2 id="&#39033;&#30446;-1:-&#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;">&#39033;&#30446; 1: &#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;<a class="anchor-link" href="#&#39033;&#30446;-1:-&#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;">&#194;&#182;</a></h2><p>欢迎来到机器学习工程师纳米学位的第一个项目！在此文件中，有些示例代码已经提供给你，但你还需要实现更多的功能来让项目成功运行。除非有明确要求，你无须修改任何已给出的代码。以<strong>编程练习</strong>开始的标题表示接下来的内容中有需要你必须实现的功能。每一部分都会有详细的指导，需要实现的部分也会在注释中以<strong>TODO</strong>标出。请仔细阅读所有的提示！</p>
+<h1 id="&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;">&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;<a class="anchor-link" href="#&#26426;&#22120;&#23398;&#20064;&#24037;&#31243;&#24072;&#32435;&#31859;&#23398;&#20301;">&#182;</a></h1><h2 id="&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;">&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;<a class="anchor-link" href="#&#27169;&#22411;&#35780;&#20215;&#19982;&#39564;&#35777;">&#182;</a></h2><h2 id="&#39033;&#30446;-1:-&#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;">&#39033;&#30446; 1: &#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;<a class="anchor-link" href="#&#39033;&#30446;-1:-&#39044;&#27979;&#27874;&#22763;&#39039;&#25151;&#20215;">&#182;</a></h2><p>欢迎来到机器学习工程师纳米学位的第一个项目！在此文件中，有些示例代码已经提供给你，但你还需要实现更多的功能来让项目成功运行。除非有明确要求，你无须修改任何已给出的代码。以<strong>编程练习</strong>开始的标题表示接下来的内容中有需要你必须实现的功能。每一部分都会有详细的指导，需要实现的部分也会在注释中以<strong>TODO</strong>标出。请仔细阅读所有的提示！</p>
 <p>除了实现代码外，你还<strong>必须</strong>回答一些与项目和实现有关的问题。每一个需要你回答的问题都会以<strong>'问题 X'</strong>为标题。请仔细阅读每个问题，并且在问题后的<strong>'回答'</strong>文字框中写出完整的答案。你的项目将会根据你对问题的回答和撰写代码所实现的功能来进行评分。</p>
 <blockquote><p><strong>提示：</strong>Code 和 Markdown 区域可通过 <strong>Shift + Enter</strong> 快捷键运行。此外，Markdown可以通过双击进入编辑模式。</p>
 </blockquote>
@@ -11783,12 +11786,13 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="&#31532;&#19968;&#27493;.-&#23548;&#20837;&#25968;&#25454;">&#31532;&#19968;&#27493;. &#23548;&#20837;&#25968;&#25454;<a class="anchor-link" href="#&#31532;&#19968;&#27493;.-&#23548;&#20837;&#25968;&#25454;">&#194;&#182;</a></h2><p>在这个项目中，你将利用马萨诸塞州波士顿郊区的房屋信息数据训练和测试一个模型，并对模型的性能和预测能力进行测试。通过该数据训练后的好的模型可以被用来对房屋做特定预测---尤其是对房屋的价值。对于房地产经纪等人的日常工作来说，这样的预测模型被证明非常有价值。</p>
+<h2 id="&#31532;&#19968;&#27493;.-&#23548;&#20837;&#25968;&#25454;">&#31532;&#19968;&#27493;. &#23548;&#20837;&#25968;&#25454;<a class="anchor-link" href="#&#31532;&#19968;&#27493;.-&#23548;&#20837;&#25968;&#25454;">&#182;</a></h2><p>在这个项目中，你将利用马萨诸塞州波士顿郊区的房屋信息数据训练和测试一个模型，并对模型的性能和预测能力进行测试。通过该数据训练后的好的模型可以被用来对房屋做特定预测---尤其是对房屋的价值。对于房地产经纪等人的日常工作来说，这样的预测模型被证明非常有价值。</p>
 <p>此项目的数据集来自<a href="https://archive.ics.uci.edu/ml/datasets.html">UCI机器学习知识库(数据集已下线)</a>。波士顿房屋这些数据于1978年开始统计，共506个数据点，涵盖了麻省波士顿不同郊区房屋14种特征的信息。本项目对原始数据集做了以下处理：</p>
 <ul>
 <li>有16个<code>'MEDV'</code> 值为50.0的数据点被移除。 这很可能是由于这些数据点包含<strong>遗失</strong>或<strong>看不到的值</strong>。</li>
@@ -11827,7 +11831,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 载入波士顿房屋的数据集</span>
@@ -11848,9 +11852,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Boston housing dataset has 489 data points with 4 variables each.
@@ -11864,7 +11866,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -11880,9 +11882,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>      RM  LSTAT  PTRATIO      MEDV
@@ -11913,12 +11913,13 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="&#31532;&#20108;&#27493;.-&#20998;&#26512;&#25968;&#25454;">&#31532;&#20108;&#27493;. &#20998;&#26512;&#25968;&#25454;<a class="anchor-link" href="#&#31532;&#20108;&#27493;.-&#20998;&#26512;&#25968;&#25454;">&#194;&#182;</a></h2><p>在项目的第一个部分，你会对波士顿房地产数据进行初步的观察并给出你的分析。通过对数据的探索来熟悉数据可以让你更好地理解和解释你的结果。</p>
+<h2 id="&#31532;&#20108;&#27493;.-&#20998;&#26512;&#25968;&#25454;">&#31532;&#20108;&#27493;. &#20998;&#26512;&#25968;&#25454;<a class="anchor-link" href="#&#31532;&#20108;&#27493;.-&#20998;&#26512;&#25968;&#25454;">&#182;</a></h2><p>在项目的第一个部分，你会对波士顿房地产数据进行初步的观察并给出你的分析。通过对数据的探索来熟悉数据可以让你更好地理解和解释你的结果。</p>
 <p>由于这个项目的最终目标是建立一个预测房屋价值的模型，我们需要将数据集分为<strong>特征(features)</strong>和<strong>目标变量(target variable)</strong>。</p>
 <ul>
 <li><strong>特征</strong> <code>'RM'</code>， <code>'LSTAT'</code>，和 <code>'PTRATIO'</code>，给我们提供了每个数据点的数量相关的信息。</li>
@@ -11929,11 +11930,12 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;-1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;">&#32534;&#31243;&#32451;&#20064; 1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;">&#194;&#182;</a></h3><p>你的第一个编程练习是计算有关波士顿房价的描述统计数据。我们已为你导入了<code>numpy</code>，你需要使用这个库来执行必要的计算。这些统计数据对于分析模型的预测结果非常重要的。
+<h3 id="&#32534;&#31243;&#32451;&#20064;-1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;">&#32534;&#31243;&#32451;&#20064; 1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-1&#65306;&#22522;&#30784;&#32479;&#35745;&#36816;&#31639;">&#182;</a></h3><p>你的第一个编程练习是计算有关波士顿房价的描述统计数据。我们已为你导入了<code>numpy</code>，你需要使用这个库来执行必要的计算。这些统计数据对于分析模型的预测结果非常重要的。
 在下面的代码中，你要做的是：</p>
 <ul>
 <li>计算<code>prices</code>中的<code>'MEDV'</code>的最小值、最大值、均值、中值和标准差；</li>
@@ -11945,7 +11947,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO 1</span>
@@ -11983,9 +11985,7 @@ div#notebook {
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Statistics for Boston housing dataset:
@@ -12003,11 +12003,12 @@ Standard deviation of prices: $165,171.13
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-1---&#29305;&#24449;&#35266;&#23519;">&#38382;&#39064; 1 - &#29305;&#24449;&#35266;&#23519;<a class="anchor-link" href="#&#38382;&#39064;-1---&#29305;&#24449;&#35266;&#23519;">&#194;&#182;</a></h3><p>如前文所述，本项目中我们关注的是其中三个值:<code>'RM'</code>、<code>'LSTAT'</code> 和<code>'PTRATIO'</code>，对每一个数据点:</p>
+<h3 id="&#38382;&#39064;-1---&#29305;&#24449;&#35266;&#23519;">&#38382;&#39064; 1 - &#29305;&#24449;&#35266;&#23519;<a class="anchor-link" href="#&#38382;&#39064;-1---&#29305;&#24449;&#35266;&#23519;">&#182;</a></h3><p>如前文所述，本项目中我们关注的是其中三个值:<code>'RM'</code>、<code>'LSTAT'</code> 和<code>'PTRATIO'</code>，对每一个数据点:</p>
 <ul>
 <li><code>'RM'</code> 是该地区中每个房屋的平均房间数量；</li>
 <li><code>'LSTAT'</code> 是指该地区有多少百分比的业主属于是低收入阶层（有工作但收入微薄）；</li>
@@ -12019,11 +12020,12 @@ Standard deviation of prices: $165,171.13
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#38382;&#39064; 1 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>"RM":
+<h3 id="&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#38382;&#39064; 1 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-1---&#22238;&#31572;&#65306;">&#182;</a></h3><p>"RM":
 RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 <p>"LSTAT":
 低收入阶层住户越多，说明该片区的社会稳定性越低，这样的小区不容易卖出高价</p>
@@ -12033,11 +12035,12 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;-2:-&#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;">&#32534;&#31243;&#32451;&#20064; 2: &#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-2:-&#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;">&#194;&#182;</a></h3><p>接下来，你需要把波士顿房屋数据集分成训练和测试两个子集。通常在这个过程中，数据也会被重排列，以消除数据集中由于顺序而产生的偏差。
+<h3 id="&#32534;&#31243;&#32451;&#20064;-2:-&#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;">&#32534;&#31243;&#32451;&#20064; 2: &#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-2:-&#25968;&#25454;&#20998;&#21106;&#19982;&#37325;&#25490;">&#182;</a></h3><p>接下来，你需要把波士顿房屋数据集分成训练和测试两个子集。通常在这个过程中，数据也会被重排列，以消除数据集中由于顺序而产生的偏差。
 在下面的代码中，你需要</p>
 <p>使用 <code>sklearn.model_selection</code> 中的 <code>train_test_split</code>， 将<code>features</code>和<code>prices</code>的数据都分成用于训练的数据子集和用于测试的数据子集。</p>
 <ul>
@@ -12050,7 +12053,7 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 2</span>
@@ -12065,23 +12068,48 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 391 entries, 61 to 393
+Data columns (total 3 columns):
+RM         391 non-null float64
+LSTAT      391 non-null float64
+PTRATIO    391 non-null float64
+dtypes: float64(3)
+memory usage: 12.2 KB
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-2---&#35757;&#32451;&#21450;&#27979;&#35797;">&#38382;&#39064; 2 - &#35757;&#32451;&#21450;&#27979;&#35797;<a class="anchor-link" href="#&#38382;&#39064;-2---&#35757;&#32451;&#21450;&#27979;&#35797;">&#194;&#182;</a></h3><p><em>将数据集按一定比例分为训练用的数据集和测试用的数据集对学习算法有什么好处？</em></p>
+<h3 id="&#38382;&#39064;-2---&#35757;&#32451;&#21450;&#27979;&#35797;">&#38382;&#39064; 2 - &#35757;&#32451;&#21450;&#27979;&#35797;<a class="anchor-link" href="#&#38382;&#39064;-2---&#35757;&#32451;&#21450;&#27979;&#35797;">&#182;</a></h3><p><em>将数据集按一定比例分为训练用的数据集和测试用的数据集对学习算法有什么好处？</em></p>
 <p><em>如果用模型已经见过的数据，例如部分训练集数据进行测试，又有什么坏处？</em></p>
 <p><strong>提示：</strong> 如果没有数据来对模型进行测试，会出现什么问题？</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-2---&#22238;&#31572;:">&#38382;&#39064; 2 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-2---&#22238;&#31572;:">&#194;&#182;</a></h3><p>1、将数据集按一定比例分为训练用的数据集和测试用的数据集对学习算法：</p>
+<h3 id="&#38382;&#39064;-2---&#22238;&#31572;:">&#38382;&#39064; 2 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-2---&#22238;&#31572;:">&#182;</a></h3><p>1、将数据集按一定比例分为训练用的数据集和测试用的数据集对学习算法：</p>
 <p>会让学习算法的学习过程中不接触到测试数据，减少过拟合的可能。</p>
 <p>2、如果用模型已经见过的数据，例如部分训练集数据进行测试：</p>
 <p>会带来过拟合的可能，对现有数据拟合的很好，但是有新的数据来的时候就不能很好的预测了。</p>
@@ -12089,21 +12117,23 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="&#31532;&#19977;&#27493;.-&#27169;&#22411;&#34913;&#37327;&#26631;&#20934;">&#31532;&#19977;&#27493;. &#27169;&#22411;&#34913;&#37327;&#26631;&#20934;<a class="anchor-link" href="#&#31532;&#19977;&#27493;.-&#27169;&#22411;&#34913;&#37327;&#26631;&#20934;">&#194;&#182;</a></h2><p>在项目的第三步中，你需要了解必要的工具和技巧来让你的模型进行预测。用这些工具和技巧对每一个模型的表现做精确的衡量可以极大地增强你预测的信心。</p>
+<h2 id="&#31532;&#19977;&#27493;.-&#27169;&#22411;&#34913;&#37327;&#26631;&#20934;">&#31532;&#19977;&#27493;. &#27169;&#22411;&#34913;&#37327;&#26631;&#20934;<a class="anchor-link" href="#&#31532;&#19977;&#27493;.-&#27169;&#22411;&#34913;&#37327;&#26631;&#20934;">&#182;</a></h2><p>在项目的第三步中，你需要了解必要的工具和技巧来让你的模型进行预测。用这些工具和技巧对每一个模型的表现做精确的衡量可以极大地增强你预测的信心。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;">&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;">&#194;&#182;</a></h3><p>如果不能对模型的训练和测试的表现进行量化地评估，我们就很难衡量模型的好坏。通常我们会定义一些衡量标准，这些标准可以通过对某些误差或者拟合程度的计算来得到。在这个项目中，你将通过运算<a href="http://stattrek.com/statistics/dictionary.aspx?definition=coefficient_of_determination"><em>决定系数</em></a> R<sup>2</sup> 来量化模型的表现。模型的决定系数是回归分析中十分常用的统计信息，经常被当作衡量模型预测能力好坏的标准。</p>
+<h3 id="&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;">&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;3&#65306;&#23450;&#20041;&#34913;&#37327;&#26631;&#20934;">&#182;</a></h3><p>如果不能对模型的训练和测试的表现进行量化地评估，我们就很难衡量模型的好坏。通常我们会定义一些衡量标准，这些标准可以通过对某些误差或者拟合程度的计算来得到。在这个项目中，你将通过运算<a href="http://stattrek.com/statistics/dictionary.aspx?definition=coefficient_of_determination"><em>决定系数</em></a> R<sup>2</sup> 来量化模型的表现。模型的决定系数是回归分析中十分常用的统计信息，经常被当作衡量模型预测能力好坏的标准。</p>
 <p>R<sup>2</sup>的数值范围从0至1，表示<strong>目标变量</strong>的预测值和实际值之间的相关程度平方的百分比。一个模型的R<sup>2</sup> 值为0还不如直接用<strong>平均值</strong>来预测效果好；而一个R<sup>2</sup> 值为1的模型则可以对目标变量进行完美的预测。从0至1之间的数值，则表示该模型中目标变量中有百分之多少能够用<strong>特征</strong>来解释。<em>模型也可能出现负值的R<sup>2</sup>，这种情况下模型所做预测有时会比直接计算目标变量的平均值差很多。</em></p>
 <p>在下方代码的 <code>performance_metric</code> 函数中，你要实现：</p>
 <ul>
@@ -12120,7 +12150,7 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 3</span>
@@ -12143,7 +12173,7 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 3 可选</span>
@@ -12152,9 +12182,13 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 
 <span class="k">def</span> <span class="nf">performance_metric2</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;计算并返回预测值相比于预测值的分数&quot;&quot;&quot;</span>
-    
-    <span class="n">score</span> <span class="o">=</span> <span class="bp">None</span>
 
+    <span class="n">meanTrue</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_true</span><span class="p">)</span>
+    <span class="n">ssTot</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span><span class="o">-</span><span class="n">meanTrue</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ssReg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_predict</span><span class="o">-</span><span class="n">meanTrue</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ssRes</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y_true</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">ssRes</span><span class="o">/</span><span class="n">ssTot</span>
+    
     <span class="k">return</span> <span class="n">score</span>
 </pre></div>
 
@@ -12163,11 +12197,12 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-3---&#25311;&#21512;&#31243;&#24230;">&#38382;&#39064; 3 - &#25311;&#21512;&#31243;&#24230;<a class="anchor-link" href="#&#38382;&#39064;-3---&#25311;&#21512;&#31243;&#24230;">&#194;&#182;</a></h3><p>假设一个数据集有五个数据且一个模型做出下列目标变量的预测：</p>
+<h3 id="&#38382;&#39064;-3---&#25311;&#21512;&#31243;&#24230;">&#38382;&#39064; 3 - &#25311;&#21512;&#31243;&#24230;<a class="anchor-link" href="#&#38382;&#39064;-3---&#25311;&#21512;&#31243;&#24230;">&#182;</a></h3><p>假设一个数据集有五个数据且一个模型做出下列目标变量的预测：</p>
 <table>
 <thead><tr>
 <th style="text-align:center">真实数值</th>
@@ -12205,11 +12240,11 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 计算这个模型的预测结果的决定系数</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric2</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
 <span class="k">print</span> <span class="s2">&quot;Model has a coefficient of determination, R^2, of {:.3f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 </pre></div>
 
@@ -12222,9 +12257,7 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model has a coefficient of determination, R^2, of 0.923.
@@ -12236,30 +12269,33 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-3---&#22238;&#31572;:">&#38382;&#39064; 3 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-3---&#22238;&#31572;:">&#194;&#182;</a></h3><p>该模型有一定可能性成功描述了问题，因为在当前的数据看来，R^2的值接近于为0.923，接近于1，说明了还是比较能拟合于当前数据，但是可能对于其他数据的<strong><em>泛化能力</em></strong>还有待验证。</p>
+<h3 id="&#38382;&#39064;-3---&#22238;&#31572;:">&#38382;&#39064; 3 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-3---&#22238;&#31572;:">&#182;</a></h3><p>该模型有一定可能性成功描述了问题，因为在当前的数据看来，R^2的值接近于为0.923，接近于1，说明了还是比较能拟合于当前数据，但是可能对于其他数据的<strong><em>泛化能力</em></strong>还有待验证。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="&#31532;&#22235;&#27493;.-&#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;">&#31532;&#22235;&#27493;. &#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;<a class="anchor-link" href="#&#31532;&#22235;&#27493;.-&#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;">&#194;&#182;</a></h2><p>在项目的第四步，我们来看一下不同参数下，模型在训练集和验证集上的表现。这里，我们专注于一个特定的算法（带剪枝的决策树，但这并不是这个项目的重点），和这个算法的一个参数 <code>'max_depth'</code>。用全部训练集训练，选择不同<code>'max_depth'</code> 参数，观察这一参数的变化如何影响模型的表现。画出模型的表现来对于分析过程十分有益，这可以让我们看到一些单看结果看不到的行为。</p>
+<h2 id="&#31532;&#22235;&#27493;.-&#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;">&#31532;&#22235;&#27493;. &#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;<a class="anchor-link" href="#&#31532;&#22235;&#27493;.-&#20998;&#26512;&#27169;&#22411;&#30340;&#34920;&#29616;">&#182;</a></h2><p>在项目的第四步，我们来看一下不同参数下，模型在训练集和验证集上的表现。这里，我们专注于一个特定的算法（带剪枝的决策树，但这并不是这个项目的重点），和这个算法的一个参数 <code>'max_depth'</code>。用全部训练集训练，选择不同<code>'max_depth'</code> 参数，观察这一参数的变化如何影响模型的表现。画出模型的表现来对于分析过程十分有益，这可以让我们看到一些单看结果看不到的行为。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#23398;&#20064;&#26354;&#32447;">&#23398;&#20064;&#26354;&#32447;<a class="anchor-link" href="#&#23398;&#20064;&#26354;&#32447;">&#194;&#182;</a></h3><p>下方区域内的代码会输出四幅图像，它们是一个决策树模型在不同最大深度下的表现。每一条曲线都直观得显示了随着训练数据量的增加，模型学习曲线的在训练集评分和验证集评分的变化，评分使用决定系数R<sup>2</sup>。曲线的阴影区域代表的是该曲线的不确定性（用标准差衡量）。</p>
+<h3 id="&#23398;&#20064;&#26354;&#32447;">&#23398;&#20064;&#26354;&#32447;<a class="anchor-link" href="#&#23398;&#20064;&#26354;&#32447;">&#182;</a></h3><p>下方区域内的代码会输出四幅图像，它们是一个决策树模型在不同最大深度下的表现。每一条曲线都直观得显示了随着训练数据量的增加，模型学习曲线的在训练集评分和验证集评分的变化，评分使用决定系数R<sup>2</sup>。曲线的阴影区域代表的是该曲线的不确定性（用标准差衡量）。</p>
 <p>运行下方区域中的代码，并利用输出的图形回答下面的问题。</p>
 
 </div>
@@ -12283,9 +12319,7 @@ RM 越多，说明房屋面积可能会越大，房屋价格就越高</p>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -13303,32 +13337,35 @@ TpKZmZmZmVmJO0lmZmZmZmYl7iSZmZmZmZmV/BfnR5olQ8FP9AAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-4---&#23398;&#20064;&#26354;&#32447;">&#38382;&#39064; 4 - &#23398;&#20064;&#26354;&#32447;<a class="anchor-link" href="#&#38382;&#39064;-4---&#23398;&#20064;&#26354;&#32447;">&#194;&#182;</a></h3><p><em>选择上述图像中的其中一个，并给出其最大深度。随着训练数据量的增加，训练集曲线的评分有怎样的变化？验证集曲线呢？如果有更多的训练数据，是否能有效提升模型的表现呢？</em></p>
+<h3 id="&#38382;&#39064;-4---&#23398;&#20064;&#26354;&#32447;">&#38382;&#39064; 4 - &#23398;&#20064;&#26354;&#32447;<a class="anchor-link" href="#&#38382;&#39064;-4---&#23398;&#20064;&#26354;&#32447;">&#182;</a></h3><p><em>选择上述图像中的其中一个，并给出其最大深度。随着训练数据量的增加，训练集曲线的评分有怎样的变化？验证集曲线呢？如果有更多的训练数据，是否能有效提升模型的表现呢？</em></p>
 <p><strong>提示：</strong>学习曲线的评分是否最终会收敛到特定的值？</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-4---&#22238;&#31572;:">&#38382;&#39064; 4 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-4---&#22238;&#31572;:">&#194;&#182;</a></h3><p>随着训练数据的增加，训练集的评分曲线的值随之变得越来越低，收敛于某一个值。</p>
+<h3 id="&#38382;&#39064;-4---&#22238;&#31572;:">&#38382;&#39064; 4 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-4---&#22238;&#31572;:">&#182;</a></h3><p>随着训练数据的增加，训练集的评分曲线的值随之变得越来越低，收敛于某一个值。</p>
 <p>随着训练数据的增加，验证集的评分曲线的值随之变得越来越高，收敛于某一个值。</p>
 <p>从目前的数据看来，不论树的最大深度为多少，数据增加都会给模型表现带来增加，但是都有一个极限值，表现最好的极限值存在于<strong>max_depth==3</strong>的情况下，测试数据的分数收敛于<strong>0.8</strong>左右。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#22797;&#26434;&#24230;&#26354;&#32447;">&#22797;&#26434;&#24230;&#26354;&#32447;<a class="anchor-link" href="#&#22797;&#26434;&#24230;&#26354;&#32447;">&#194;&#182;</a></h3><p>下列代码内的区域会输出一幅图像，它展示了一个已经经过训练和验证的决策树模型在不同最大深度条件下的表现。这个图形将包含两条曲线，一个是训练集的变化，一个是验证集的变化。跟<strong>学习曲线</strong>相似，阴影区域代表该曲线的不确定性，模型训练和测试部分的评分都用的 <code>performance_metric</code> 函数。</p>
+<h3 id="&#22797;&#26434;&#24230;&#26354;&#32447;">&#22797;&#26434;&#24230;&#26354;&#32447;<a class="anchor-link" href="#&#22797;&#26434;&#24230;&#26354;&#32447;">&#182;</a></h3><p>下列代码内的区域会输出一幅图像，它展示了一个已经经过训练和验证的决策树模型在不同最大深度条件下的表现。这个图形将包含两条曲线，一个是训练集的变化，一个是验证集的变化。跟<strong>学习曲线</strong>相似，阴影区域代表该曲线的不确定性，模型训练和测试部分的评分都用的 <code>performance_metric</code> 函数。</p>
 <p>运行下方区域中的代码，并利用输出的图形并回答下面的两个问题。</p>
 
 </div>
@@ -13352,9 +13389,7 @@ TpKZmZmZmVmJO0lmZmZmZmYl7iSZmZmZmZmV/BfnR5olQ8FP9AAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 
 
@@ -13784,77 +13819,85 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-5---&#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;">&#38382;&#39064; 5 - &#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;<a class="anchor-link" href="#&#38382;&#39064;-5---&#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;">&#194;&#182;</a></h3><p><em>当模型以最大深度 1训练时，模型的预测是出现很大的偏差还是出现了很大的方差？当模型以最大深度10训练时，情形又如何呢？图形中的哪些特征能够支持你的结论？</em></p>
+<h3 id="&#38382;&#39064;-5---&#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;">&#38382;&#39064; 5 - &#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;<a class="anchor-link" href="#&#38382;&#39064;-5---&#20559;&#24046;&#65288;bias&#65289;&#19982;&#26041;&#24046;&#65288;variance&#65289;&#20043;&#38388;&#30340;&#26435;&#34913;&#21462;&#33293;">&#182;</a></h3><p><em>当模型以最大深度 1训练时，模型的预测是出现很大的偏差还是出现了很大的方差？当模型以最大深度10训练时，情形又如何呢？图形中的哪些特征能够支持你的结论？</em></p>
 <p><strong>提示：</strong> 你如何得知模型是否出现了偏差很大或者方差很大的问题？</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-5---&#22238;&#31572;:">&#38382;&#39064; 5 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-5---&#22238;&#31572;:">&#194;&#182;</a></h3><p>当深度为1的时候，预测出现了很大的偏差，但是方差很小。</p>
+<h3 id="&#38382;&#39064;-5---&#22238;&#31572;:">&#38382;&#39064; 5 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-5---&#22238;&#31572;:">&#182;</a></h3><p>当深度为1的时候，预测出现了很大的偏差，但是方差很小。</p>
 <p>当模型深度为10的时候，模型方差很大，但是偏差很小。</p>
 <p>从图上可以看到，当横坐标的 Depth 为1的时候，红线和绿线的r2得分都很低，说明偏差很大；但是Depth==1时候两条线间距的宽度比Depth==10时候的宽度小多了。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-6--&#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;">&#38382;&#39064; 6- &#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;<a class="anchor-link" href="#&#38382;&#39064;-6--&#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;">&#194;&#182;</a></h3><p><em>结合问题 5 中的图，你认为最大深度是多少的模型能够最好地对未见过的数据进行预测？你得出这个答案的依据是什么？</em></p>
+<h3 id="&#38382;&#39064;-6--&#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;">&#38382;&#39064; 6- &#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;<a class="anchor-link" href="#&#38382;&#39064;-6--&#26368;&#20248;&#27169;&#22411;&#30340;&#29468;&#27979;">&#182;</a></h3><p><em>结合问题 5 中的图，你认为最大深度是多少的模型能够最好地对未见过的数据进行预测？你得出这个答案的依据是什么？</em></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-6---&#22238;&#31572;:">&#38382;&#39064; 6 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-6---&#22238;&#31572;:">&#194;&#182;</a></h3><p>我认为<strong>Depth == 4</strong>时候的模型最好的对未见过的数据进行预测，因为在Depth==3时候，绿线达到最高点，说明误差很小；并且这时候绿线和红线的间距相对来说也很小，说明方差很小。</p>
+<h3 id="&#38382;&#39064;-6---&#22238;&#31572;:">&#38382;&#39064; 6 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-6---&#22238;&#31572;:">&#182;</a></h3><p>我认为<strong>Depth == 4</strong>时候的模型最好的对未见过的数据进行预测，因为在Depth==3时候，绿线达到最高点，说明误差很小；并且这时候绿线和红线的间距相对来说也很小，说明方差很小。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="&#31532;&#20116;&#27493;.-&#36873;&#25321;&#26368;&#20248;&#21442;&#25968;">&#31532;&#20116;&#27493;. &#36873;&#25321;&#26368;&#20248;&#21442;&#25968;<a class="anchor-link" href="#&#31532;&#20116;&#27493;.-&#36873;&#25321;&#26368;&#20248;&#21442;&#25968;">&#194;&#182;</a></h2>
+<h2 id="&#31532;&#20116;&#27493;.-&#36873;&#25321;&#26368;&#20248;&#21442;&#25968;">&#31532;&#20116;&#27493;. &#36873;&#25321;&#26368;&#20248;&#21442;&#25968;<a class="anchor-link" href="#&#31532;&#20116;&#27493;.-&#36873;&#25321;&#26368;&#20248;&#21442;&#25968;">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-7--&#32593;&#26684;&#25628;&#32034;&#65288;Grid-Search&#65289;">&#38382;&#39064; 7- &#32593;&#26684;&#25628;&#32034;&#65288;Grid Search&#65289;<a class="anchor-link" href="#&#38382;&#39064;-7--&#32593;&#26684;&#25628;&#32034;&#65288;Grid-Search&#65289;">&#194;&#182;</a></h3><p><em>什么是网格搜索法？如何用它来优化模型？</em></p>
+<h3 id="&#38382;&#39064;-7--&#32593;&#26684;&#25628;&#32034;&#65288;Grid-Search&#65289;">&#38382;&#39064; 7- &#32593;&#26684;&#25628;&#32034;&#65288;Grid Search&#65289;<a class="anchor-link" href="#&#38382;&#39064;-7--&#32593;&#26684;&#25628;&#32034;&#65288;Grid-Search&#65289;">&#182;</a></h3><p><em>什么是网格搜索法？如何用它来优化模型？</em></p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-7---&#22238;&#31572;:">&#38382;&#39064; 7 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-7---&#22238;&#31572;:">&#194;&#182;</a></h3><p>一个模型算法，用多种参数组合来进行学习，并最终得到最优的模型参数。</p>
+<h3 id="&#38382;&#39064;-7---&#22238;&#31572;:">&#38382;&#39064; 7 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-7---&#22238;&#31572;:">&#182;</a></h3><p>一个模型算法，用多种参数组合来进行学习，并最终得到最优的模型参数。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-8---&#20132;&#21449;&#39564;&#35777;">&#38382;&#39064; 8 - &#20132;&#21449;&#39564;&#35777;<a class="anchor-link" href="#&#38382;&#39064;-8---&#20132;&#21449;&#39564;&#35777;">&#194;&#182;</a></h3><ul>
+<h3 id="&#38382;&#39064;-8---&#20132;&#21449;&#39564;&#35777;">&#38382;&#39064; 8 - &#20132;&#21449;&#39564;&#35777;<a class="anchor-link" href="#&#38382;&#39064;-8---&#20132;&#21449;&#39564;&#35777;">&#182;</a></h3><ul>
 <li>什么是K折交叉验证法（k-fold cross-validation）？</li>
 <li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html">GridSearchCV</a>是如何结合交叉验证来完成对最佳参数组合的选择的？</li>
 <li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html">GridSearchCV</a>中的<code>'cv_results_'</code>属性能告诉我们什么？</li>
@@ -13865,11 +13908,12 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p><strong>1、kFlod</strong>：</p>
+<h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#182;</a></h3><p><strong>1、kFlod</strong>：</p>
 <p>是将数据分为K等份，然后每次将其中一份数据集作为测试数据，将剩余K-1份数据作为训练集进行训练的验证方法。</p>
 <p><strong>2、kFlod与GridSearchCV结合</strong>：</p>
 <p>可以看到，结合kFlod，GridSearchCV可以进行K次学习和验证过程，避免参数划分不均匀带来的误差。</p>
@@ -13881,11 +13925,12 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;">&#32534;&#31243;&#32451;&#20064; 4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;">&#194;&#182;</a></h3><p>在这个练习中，你将需要将所学到的内容整合，使用<strong>决策树算法</strong>训练一个模型。为了得出的是一个最优模型，你需要使用网格搜索法训练模型，以找到最佳的 <code>'max_depth'</code> 参数。你可以把<code>'max_depth'</code> 参数理解为决策树算法在做出预测前，允许其对数据提出问题的数量。决策树是<strong>监督学习算法</strong>中的一种。</p>
+<h3 id="&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;">&#32534;&#31243;&#32451;&#20064; 4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;">&#182;</a></h3><p>在这个练习中，你将需要将所学到的内容整合，使用<strong>决策树算法</strong>训练一个模型。为了得出的是一个最优模型，你需要使用网格搜索法训练模型，以找到最佳的 <code>'max_depth'</code> 参数。你可以把<code>'max_depth'</code> 参数理解为决策树算法在做出预测前，允许其对数据提出问题的数量。决策树是<strong>监督学习算法</strong>中的一种。</p>
 <p>在下方 <code>fit_model</code> 函数中，你需要做的是：</p>
 <ol>
 <li><strong>定义 <code>'cross_validator'</code> 变量</strong>: 使用 <code>sklearn.model_selection</code> 中的 <a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html"><code>KFold</code></a> 创建一个交叉验证生成器对象;</li>
@@ -13902,7 +13947,7 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 4</span>
@@ -13938,11 +13983,12 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;-&#65288;&#21487;&#36873;&#65289;">&#32534;&#31243;&#32451;&#20064; 4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411; &#65288;&#21487;&#36873;&#65289;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;-&#65288;&#21487;&#36873;&#65289;">&#194;&#182;</a></h3><p>在这个练习中，你将需要将所学到的内容整合，使用<strong>决策树算法</strong>训练一个模型。为了得出的是一个最优模型，你需要使用网格搜索法训练模型，以找到最佳的 <code>'max_depth'</code> 参数。你可以把<code>'max_depth'</code> 参数理解为决策树算法在做出预测前，允许其对数据提出问题的数量。决策树是<strong>监督学习算法</strong>中的一种。</p>
+<h3 id="&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;-&#65288;&#21487;&#36873;&#65289;">&#32534;&#31243;&#32451;&#20064; 4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411; &#65288;&#21487;&#36873;&#65289;<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-4&#65306;&#35757;&#32451;&#26368;&#20248;&#27169;&#22411;-&#65288;&#21487;&#36873;&#65289;">&#182;</a></h3><p>在这个练习中，你将需要将所学到的内容整合，使用<strong>决策树算法</strong>训练一个模型。为了得出的是一个最优模型，你需要使用网格搜索法训练模型，以找到最佳的 <code>'max_depth'</code> 参数。你可以把<code>'max_depth'</code> 参数理解为决策树算法在做出预测前，允许其对数据提出问题的数量。决策树是<strong>监督学习算法</strong>中的一种。</p>
 <p>在下方 <code>fit_model</code> 函数中，你需要做的是：</p>
 <ul>
 <li>遍历参数<code>‘max_depth’</code>的可选值 1～10，构造对应模型</li>
@@ -13955,7 +14001,7 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 4 可选</span>
@@ -13964,18 +14010,33 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 <span class="sd">不允许使用 DecisionTreeRegressor 以外的任何 sklearn 库</span>
 
 <span class="sd">提示: 你可能需要实现下面的 cross_val_score 函数</span>
-
-<span class="sd">def cross_val_score(estimator, X, y, scoring = performance_metric, cv=3):</span>
-<span class="sd">    &quot;&quot;&quot; 返回每组交叉验证的模型分数的数组 &quot;&quot;&quot;</span>
-<span class="sd">    scores = [0,0,0]</span>
-<span class="sd">    return scores</span>
 <span class="sd">&#39;&#39;&#39;</span>
+<span class="k">def</span> <span class="nf">cross_val_score</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; 返回每组交叉验证的模型分数的数组 &quot;&quot;&quot;</span>
+    <span class="n">scores</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">train_index</span><span class="p">,</span><span class="n">test_index</span> <span class="ow">in</span> <span class="n">cv</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span><span class="n">X</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+        <span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span><span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
+        
+        <span class="n">estimator</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="n">predictRes</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">performance_metric2</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">predictRes</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">fit_model2</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; 基于输入数据 [X,y]，利于网格搜索找到最优的决策树模型&quot;&quot;&quot;</span>
-    
     <span class="c1">#最优交叉验证分数对应的最优模型</span>
     <span class="n">best_estimator</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">scoreMax</span> <span class="o">=</span> <span class="o">-</span><span class="mi">999</span>
+    <span class="n">cross_validator</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
+    <span class="k">for</span> <span class="n">depth</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">regressor</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">max_depth</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
+        <span class="n">scoreTmp</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">regressor</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">cv</span><span class="o">=</span><span class="n">cross_validator</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">scoreTmp</span> <span class="o">&gt;</span> <span class="n">scoreMax</span><span class="p">:</span>
+            <span class="n">scoreMax</span> <span class="o">=</span> <span class="n">scoreTmp</span>
+            <span class="n">best_estimator</span> <span class="o">=</span> <span class="n">regressor</span>
     
     <span class="k">return</span> <span class="n">best_estimator</span>
 </pre></div>
@@ -13985,11 +14046,12 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-9---&#26368;&#20248;&#27169;&#22411;">&#38382;&#39064; 9 - &#26368;&#20248;&#27169;&#22411;<a class="anchor-link" href="#&#38382;&#39064;-9---&#26368;&#20248;&#27169;&#22411;">&#194;&#182;</a></h3><p><em>最优模型的最大深度（maximum depth）是多少？此答案与你在<strong>问题 6</strong>所做的猜测是否相同？</em></p>
+<h3 id="&#38382;&#39064;-9---&#26368;&#20248;&#27169;&#22411;">&#38382;&#39064; 9 - &#26368;&#20248;&#27169;&#22411;<a class="anchor-link" href="#&#38382;&#39064;-9---&#26368;&#20248;&#27169;&#22411;">&#182;</a></h3><p><em>最优模型的最大深度（maximum depth）是多少？此答案与你在<strong>问题 6</strong>所做的猜测是否相同？</em></p>
 <p>运行下方区域内的代码，将决策树回归函数代入训练数据的集合，以得到最优化的模型。</p>
 
 </div>
@@ -13997,11 +14059,11 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 基于训练数据，获得最优模型</span>
-<span class="n">optimal_reg</span> <span class="o">=</span> <span class="n">fit_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">optimal_reg</span> <span class="o">=</span> <span class="n">fit_model2</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
 <span class="c1"># 输出最优模型的 &#39;max_depth&#39; 参数</span>
 <span class="k">print</span> <span class="s2">&quot;Parameter &#39;max_depth&#39; is {} for the optimal model.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">optimal_reg</span><span class="o">.</span><span class="n">get_params</span><span class="p">()[</span><span class="s1">&#39;max_depth&#39;</span><span class="p">])</span>
@@ -14016,9 +14078,7 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Parameter &#39;max_depth&#39; is 4 for the optimal model.
@@ -14030,29 +14090,32 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#38382;&#39064; 9 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>一样的，都是Depth==4的时候最优。</p>
+<h3 id="&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#38382;&#39064; 9 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#182;</a></h3><p>一样的，都是Depth==4的时候最优。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#31532;&#20845;&#27493;.-&#20570;&#20986;&#39044;&#27979;">&#31532;&#20845;&#27493;. &#20570;&#20986;&#39044;&#27979;<a class="anchor-link" href="#&#31532;&#20845;&#27493;.-&#20570;&#20986;&#39044;&#27979;">&#194;&#182;</a></h2><p>当我们用数据训练出一个模型，它现在就可用于对新的数据进行预测。在决策树回归函数中，模型已经学会对新输入的数据<em>提问</em>，并返回对<strong>目标变量</strong>的预测值。你可以用这个预测来获取数据未知目标变量的信息，这些数据必须是不包含在训练数据之内的。</p>
+<h2 id="&#31532;&#20845;&#27493;.-&#20570;&#20986;&#39044;&#27979;">&#31532;&#20845;&#27493;. &#20570;&#20986;&#39044;&#27979;<a class="anchor-link" href="#&#31532;&#20845;&#27493;.-&#20570;&#20986;&#39044;&#27979;">&#182;</a></h2><p>当我们用数据训练出一个模型，它现在就可用于对新的数据进行预测。在决策树回归函数中，模型已经学会对新输入的数据<em>提问</em>，并返回对<strong>目标变量</strong>的预测值。你可以用这个预测来获取数据未知目标变量的信息，这些数据必须是不包含在训练数据之内的。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-10---&#39044;&#27979;&#38144;&#21806;&#20215;&#26684;">&#38382;&#39064; 10 - &#39044;&#27979;&#38144;&#21806;&#20215;&#26684;<a class="anchor-link" href="#&#38382;&#39064;-10---&#39044;&#27979;&#38144;&#21806;&#20215;&#26684;">&#194;&#182;</a></h3><p>想像你是一个在波士顿地区的房屋经纪人，并期待使用此模型以帮助你的客户评估他们想出售的房屋。你已经从你的三个客户收集到以下的资讯:</p>
+<h3 id="&#38382;&#39064;-10---&#39044;&#27979;&#38144;&#21806;&#20215;&#26684;">&#38382;&#39064; 10 - &#39044;&#27979;&#38144;&#21806;&#20215;&#26684;<a class="anchor-link" href="#&#38382;&#39064;-10---&#39044;&#27979;&#38144;&#21806;&#20215;&#26684;">&#182;</a></h3><p>想像你是一个在波士顿地区的房屋经纪人，并期待使用此模型以帮助你的客户评估他们想出售的房屋。你已经从你的三个客户收集到以下的资讯:</p>
 <table>
 <thead><tr>
 <th style="text-align:center">特征</th>
@@ -14114,9 +14177,7 @@ QFHwiYhIoCj4REQkUBR8IiISKAo+EREJFAWfiIgEyv8Dh5LSIREiG6MAAAAASUVORK5CYII=
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Predicted selling price for Client 1&#39;s home: $414,400.00
@@ -14130,27 +14191,29 @@ Predicted selling price for Client 3&#39;s home: $946,166.67
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>合理的，更多的房间、更少的贫困指数、更大的学生-教师比例，带来了更高的房屋价格。</p>
+<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><p>合理的，更多的房间、更少的贫困指数、更大的学生-教师比例，带来了更高的房屋价格。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#32534;&#31243;&#32451;&#20064;-5">&#32534;&#31243;&#32451;&#20064; 5<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-5">&#194;&#182;</a></h3><p>你刚刚预测了三个客户的房子的售价。在这个练习中，你将用你的最优模型在整个测试数据上进行预测, 并计算相对于目标变量的决定系数 R<sup>2</sup>的值**。</p>
+<h3 id="&#32534;&#31243;&#32451;&#20064;-5">&#32534;&#31243;&#32451;&#20064; 5<a class="anchor-link" href="#&#32534;&#31243;&#32451;&#20064;-5">&#182;</a></h3><p>你刚刚预测了三个客户的房子的售价。在这个练习中，你将用你的最优模型在整个测试数据上进行预测, 并计算相对于目标变量的决定系数 R<sup>2</sup>的值**。</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#TODO 5</span>
@@ -14175,12 +14238,10 @@ Predicted selling price for Client 3&#39;s home: $946,166.67
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Optimal model has R^2 score 0.84 on test data
+<pre>Optimal model has R^2 score 0.82 on test data
 </pre>
 </div>
 </div>
@@ -14189,30 +14250,33 @@ Predicted selling price for Client 3&#39;s home: $946,166.67
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;11---&#20998;&#26512;&#20915;&#23450;&#31995;&#25968;">&#38382;&#39064;11 - &#20998;&#26512;&#20915;&#23450;&#31995;&#25968;<a class="anchor-link" href="#&#38382;&#39064;11---&#20998;&#26512;&#20915;&#23450;&#31995;&#25968;">&#194;&#182;</a></h3><p>你刚刚计算了最优模型在测试集上的决定系数，你会如何评价这个结果？</p>
+<h3 id="&#38382;&#39064;11---&#20998;&#26512;&#20915;&#23450;&#31995;&#25968;">&#38382;&#39064;11 - &#20998;&#26512;&#20915;&#23450;&#31995;&#25968;<a class="anchor-link" href="#&#38382;&#39064;11---&#20998;&#26512;&#20915;&#23450;&#31995;&#25968;">&#182;</a></h3><p>你刚刚计算了最优模型在测试集上的决定系数，你会如何评价这个结果？</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;11---&#22238;&#31572;">&#38382;&#39064;11 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;11---&#22238;&#31572;">&#194;&#182;</a></h3><p>我认为R^2的结果趋近于1，表名其预测能力不错，但是还是需要更多维度的参数输入来使其达到最优。</p>
+<h3 id="&#38382;&#39064;11---&#22238;&#31572;">&#38382;&#39064;11 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;11---&#22238;&#31572;">&#182;</a></h3><p>我认为R^2的结果趋近于1，表名其预测能力不错，但是还是需要更多维度的参数输入来使其达到最优。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#27169;&#22411;&#20581;&#22766;&#24615;">&#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#27169;&#22411;&#20581;&#22766;&#24615;">&#194;&#182;</a></h3><p>一个最优的模型不一定是一个健壮模型。有的时候模型会过于复杂或者过于简单，以致于难以泛化新增添的数据；有的时候模型采用的学习算法并不适用于特定的数据结构；有的时候样本本身可能有太多噪点或样本过少，使得模型无法准确地预测目标变量。这些情况下我们会说模型是欠拟合的。</p>
-<h3 id="&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#38382;&#39064; 12 - &#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#194;&#182;</a></h3><p>模型是否足够健壮来保证预测的一致性？</p>
+<h3 id="&#27169;&#22411;&#20581;&#22766;&#24615;">&#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#27169;&#22411;&#20581;&#22766;&#24615;">&#182;</a></h3><p>一个最优的模型不一定是一个健壮模型。有的时候模型会过于复杂或者过于简单，以致于难以泛化新增添的数据；有的时候模型采用的学习算法并不适用于特定的数据结构；有的时候样本本身可能有太多噪点或样本过少，使得模型无法准确地预测目标变量。这些情况下我们会说模型是欠拟合的。</p>
+<h3 id="&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#38382;&#39064; 12 - &#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#182;</a></h3><p>模型是否足够健壮来保证预测的一致性？</p>
 <p><strong>提示</strong>: 执行下方区域中的代码，采用不同的训练和测试集执行 <code>fit_model</code> 函数10次。注意观察对一个特定的客户来说，预测是如何随训练数据的变化而变化的。</p>
 
 </div>
@@ -14236,9 +14300,7 @@ Predicted selling price for Client 3&#39;s home: $946,166.67
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Trial 1: $411,000.00
@@ -14261,20 +14323,22 @@ Range in prices: $28,652.84
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#38382;&#39064; 12 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>模型在运行十次之后，抖动的比较大，说明模型的稳定性不够，最大值和最小值之差达到了28,652.84。</p>
+<h3 id="&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#38382;&#39064; 12 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#182;</a></h3><p>模型在运行十次之后，抖动的比较大，说明模型的稳定性不够，最大值和最小值之差达到了28,652.84。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-13---&#23454;&#29992;&#24615;&#25506;&#35752;">&#38382;&#39064; 13 - &#23454;&#29992;&#24615;&#25506;&#35752;<a class="anchor-link" href="#&#38382;&#39064;-13---&#23454;&#29992;&#24615;&#25506;&#35752;">&#194;&#182;</a></h3><p><em>简单地讨论一下你建构的模型能否在现实世界中使用？</em></p>
+<h3 id="&#38382;&#39064;-13---&#23454;&#29992;&#24615;&#25506;&#35752;">&#38382;&#39064; 13 - &#23454;&#29992;&#24615;&#25506;&#35752;<a class="anchor-link" href="#&#38382;&#39064;-13---&#23454;&#29992;&#24615;&#25506;&#35752;">&#182;</a></h3><p><em>简单地讨论一下你建构的模型能否在现实世界中使用？</em></p>
 <p>提示：回答以下几个问题，并给出相应结论的理由：</p>
 <ul>
 <li><em>1978年所采集的数据，在已考虑通货膨胀的前提下，在今天是否仍然适用？</em></li>
@@ -14286,11 +14350,12 @@ Range in prices: $28,652.84
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#38382;&#39064; 13 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#194;&#182;</a></h3><p>1、在考虑了通胀情况下，数据在今天仍然是可以使用的，但是要考虑到现在客户的买房需求可能和1978年有所变化。</p>
+<h3 id="&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#38382;&#39064; 13 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#182;</a></h3><p>1、在考虑了通胀情况下，数据在今天仍然是可以使用的，但是要考虑到现在客户的买房需求可能和1978年有所变化。</p>
 <p>2、不够，需要加入更多特征才能更好的确定一所房屋应该有的价格。</p>
 <p>3、不能，乡镇人们购买房屋的兴趣点和波士顿这样的大城市肯定是不一样的。</p>
 <p>4、还要考虑房屋本身的一些特性，买房子的时候，更多的是看这所房屋的占地面积，年限等要求，社区是作为辅助，起参考作用。</p>
@@ -14298,11 +14363,12 @@ Range in prices: $28,652.84
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21487;&#36873;&#38382;&#39064;---&#39044;&#27979;&#21271;&#20140;&#25151;&#20215;">&#21487;&#36873;&#38382;&#39064; - &#39044;&#27979;&#21271;&#20140;&#25151;&#20215;<a class="anchor-link" href="#&#21487;&#36873;&#38382;&#39064;---&#39044;&#27979;&#21271;&#20140;&#25151;&#20215;">&#194;&#182;</a></h2><p>（本题结果不影响项目是否通过）通过上面的实践，相信你对机器学习的一些常用概念有了很好的领悟和掌握。但利用70年代的波士顿房价数据进行建模的确对我们来说意义不是太大。现在你可以把你上面所学应用到北京房价数据集中 <code>bj_housing.csv</code>。</p>
+<h2 id="&#21487;&#36873;&#38382;&#39064;---&#39044;&#27979;&#21271;&#20140;&#25151;&#20215;">&#21487;&#36873;&#38382;&#39064; - &#39044;&#27979;&#21271;&#20140;&#25151;&#20215;<a class="anchor-link" href="#&#21487;&#36873;&#38382;&#39064;---&#39044;&#27979;&#21271;&#20140;&#25151;&#20215;">&#182;</a></h2><p>（本题结果不影响项目是否通过）通过上面的实践，相信你对机器学习的一些常用概念有了很好的领悟和掌握。但利用70年代的波士顿房价数据进行建模的确对我们来说意义不是太大。现在你可以把你上面所学应用到北京房价数据集中 <code>bj_housing.csv</code>。</p>
 <p>免责声明：考虑到北京房价受到宏观经济、政策调整等众多因素的直接影响，预测结果仅供参考。</p>
 <p>这个数据集的特征有：</p>
 <ul>
@@ -14324,37 +14390,91 @@ Range in prices: $28,652.84
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO 6</span>
 
 
 <span class="c1"># 你的代码</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;bj_housing.csv&#39;</span><span class="p">)</span>
+<span class="n">X_values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Y_values</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span>
+
+<span class="n">cvs</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">()</span>
+<span class="n">regression</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">regression</span> <span class="o">=</span> <span class="n">regression</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_values</span><span class="p">,</span><span class="n">Y_values</span><span class="p">)</span>
+<span class="n">predAll</span> <span class="o">=</span> <span class="n">regression</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_values</span><span class="p">)</span>
+<span class="n">scoreFinal</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">(</span><span class="n">Y_values</span><span class="p">,</span><span class="n">predAll</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;ALL Best Score:&quot;</span><span class="p">,</span><span class="n">scoreFinal</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
+<span class="n">score_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regression</span><span class="p">,</span><span class="n">cv</span> <span class="o">=</span> <span class="n">cvs</span><span class="p">,</span><span class="n">scoring</span><span class="o">=</span><span class="n">score_fnc</span><span class="p">,</span><span class="n">param_grid</span> <span class="o">=</span> <span class="n">params</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_values</span><span class="p">,</span><span class="n">Y_values</span><span class="p">)</span><span class="o">.</span><span class="n">best_estimator_</span>
+<span class="n">predAll</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_values</span><span class="p">)</span>
+<span class="n">scoreFinal</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">(</span><span class="n">Y_values</span><span class="p">,</span><span class="n">predAll</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;kFlod Best Max_depth:&quot;</span><span class="p">,</span><span class="n">grid</span><span class="o">.</span><span class="n">get_params</span><span class="p">()[</span><span class="s1">&#39;max_depth&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="s2">&quot;kFlod Best Score:&quot;</span><span class="p">,</span><span class="n">scoreFinal</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ALL Best Score: 0.99348003591
+kFlod Best Max_depth: 4
+kFlod Best Score: 0.672553097547
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;14---&#21271;&#20140;&#25151;&#20215;&#39044;&#27979;">&#38382;&#39064;14 - &#21271;&#20140;&#25151;&#20215;&#39044;&#27979;<a class="anchor-link" href="#&#38382;&#39064;14---&#21271;&#20140;&#25151;&#20215;&#39044;&#27979;">&#194;&#182;</a></h3><p>你成功的用新的数据集构建了模型了吗？他能对测试数据进行验证吗？它的表现是否符合你的预期？交叉验证是否有助于提升你模型的表现？</p>
+<h3 id="&#38382;&#39064;14---&#21271;&#20140;&#25151;&#20215;&#39044;&#27979;">&#38382;&#39064;14 - &#21271;&#20140;&#25151;&#20215;&#39044;&#27979;<a class="anchor-link" href="#&#38382;&#39064;14---&#21271;&#20140;&#25151;&#20215;&#39044;&#27979;">&#182;</a></h3><p>你成功的用新的数据集构建了模型了吗？他能对测试数据进行验证吗？它的表现是否符合你的预期？交叉验证是否有助于提升你模型的表现？</p>
 <p><strong>提示：</strong>如果你是从零开始构建机器学习的代码会让你一时觉得无从下手。这时不要着急，你要做的只是查看之前写的代码，把每一行都看明白，然后逐步构建你的模型。当中遇到什么问题也可以在我们论坛寻找答案。也许你会发现你所构建的模型的表现并没有达到你的预期，这说明机器学习并非是一项简单的任务，构建一个表现良好的模型需要长时间的研究和测试。这也是我们接下来的课程中会逐渐学到的。</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;14---&#22238;&#31572;">&#38382;&#39064;14 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;14---&#22238;&#31572;">&#194;&#182;</a></h3>
+<h3 id="&#38382;&#39064;14---&#22238;&#31572;">&#38382;&#39064;14 - &#22238;&#31572;<a class="anchor-link" href="#&#38382;&#39064;14---&#22238;&#31572;">&#182;</a></h3><p>可以对结果进行预测，但是并不能完全符合预期，因为最终的测试分数是用训练数据得出来的，模型不一定具有很强的泛化能力，需要更多外部数据来进行验证。</p>
+<p>交叉验证增加了模型最终的稳定性，同时也能减少过拟合的问题。</p>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
