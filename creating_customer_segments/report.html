@@ -12170,7 +12170,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12186,7 +12186,7 @@ div#notebook {
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span><span class="n">new_value</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 
 <span class="c1"># TODO：创建一个DecisionTreeRegressor（决策树回归器）并在训练集上训练它</span>
-<span class="n">regressor</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+<span class="n">regressor</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 <span class="n">regressor</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_pre</span> <span class="o">=</span> <span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
@@ -12207,7 +12207,7 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.801828115279
+<pre>0.784568781628
 </pre>
 </div>
 </div>
@@ -18313,11 +18313,11 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于每一个特征，找到值异常高或者是异常低的数据点</span>
-<span class="n">rmvIndex</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">rmvDic</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">log_data</span><span class="p">))],[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">log_data</span><span class="p">))]))</span>
 <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">log_data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     
     <span class="c1"># TODO：计算给定特征的Q1（数据的25th分位点）</span>
@@ -18332,12 +18332,14 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
     <span class="c1"># 显示异常点</span>
     <span class="k">print</span> <span class="s2">&quot;Data points considered outliers for the feature &#39;{}&#39;:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span>
     <span class="n">movIndexTmp</span> <span class="o">=</span> <span class="n">log_data</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">step</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">log_data</span><span class="p">[</span><span class="n">feature</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">step</span><span class="p">))]</span><span class="o">.</span><span class="n">index</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">movIndexTmp</span><span class="p">)</span>
-    <span class="n">rmvIndex</span> <span class="o">=</span> <span class="n">rmvIndex</span><span class="o">|</span><span class="nb">set</span><span class="p">(</span><span class="n">movIndexTmp</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">movIndexTmp</span><span class="p">:</span>
+        <span class="n">rmvDic</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1">#     rmvIndex = rmvIndex|set(movIndexTmp)</span>
     
 <span class="c1"># 可选：选择你希望移除的数据点的索引</span>
-<span class="n">outliers</span>  <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">rmvIndex</span><span class="p">)</span>
-
+<span class="n">outliers</span>  <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span> <span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">rmvDic</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span> <span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">rmvDic</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">}</span>
+<span class="k">print</span> <span class="n">outliers</span>
 <span class="c1"># 如果选择了的话，移除异常点</span>
 <span class="n">good_data</span> <span class="o">=</span> <span class="n">log_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">log_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">outliers</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
@@ -18355,121 +18357,15 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Data points considered outliers for the feature &#39;Fresh&#39;:
+Data points considered outliers for the feature &#39;Milk&#39;:
+Data points considered outliers for the feature &#39;Grocery&#39;:
+Data points considered outliers for the feature &#39;Frozen&#39;:
+Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
+Data points considered outliers for the feature &#39;Delicatessen&#39;:
+{128: 2, 193: 1, 264: 1, 137: 1, 142: 1, 145: 1, 154: 3, 412: 1, 285: 1, 161: 1, 420: 1, 38: 1, 171: 1, 429: 1, 175: 1, 304: 1, 305: 1, 439: 1, 184: 1, 57: 1, 187: 1, 65: 2, 66: 2, 203: 1, 289: 1, 75: 2, 81: 1, 338: 1, 343: 1, 218: 1, 95: 1, 96: 1, 353: 1, 98: 1, 355: 1, 356: 1, 357: 1, 233: 1, 109: 1}
+[128, 65, 66, 75, 154]
 </pre>
 </div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([65, 66, 81, 95, 96, 128, 171, 193, 218, 304, 305, 338, 353, 355,
-            357, 412],
-           dtype=&#39;int64&#39;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Milk&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([98, 154, 356], dtype=&#39;int64&#39;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Grocery&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([75, 154], dtype=&#39;int64&#39;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Frozen&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([38, 57, 65, 145, 175, 264, 420, 429, 439], dtype=&#39;int64&#39;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Detergents_Paper&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([75, 161], dtype=&#39;int64&#39;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Data points considered outliers for the feature &#39;Delicatessen&#39;:
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
-
-
-
-<div class="output_text output_subarea ">
-<pre>Int64Index([66, 109, 128, 137, 142, 154, 184, 187, 203, 233, 285, 289, 343], dtype=&#39;int64&#39;)</pre>
-</div>
-
 </div>
 
 </div>
@@ -18492,7 +18388,9 @@ MBgMBsOmwDg/BoPBYDAYDAaDYVNgnB+DwWAwGAwGg8GwKfi/tBsM3KOlZsQAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>应该被移除，应为只要有一个特征被看做异常，他就会影响所有数据的分布情况，进而影响最终的分析结果。</p>
+<p>异常数据点索引值：
+[128, 65, 66, 75, 154]</p>
+<p>应该被移除，应为只要有多于一个特征被看做异常，他就会影响所有数据的分布情况，进而影响最终的分析结果。</p>
 
 </div>
 </div>
@@ -18882,8 +18780,14 @@ RKJQg0lERERERCQKNZhERERERESiUINJREREREQkiv8DbMC8LeRIqoUAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <p>第一个和第二个主成分总共表示了：0.4933+0.2343=0.7276，前四个主要成分表示了：0.4933+0.2343+0.1047+0.0961=0.9284</p>
-<p>前四个主要成分主要代表了：餐饮、超市、熟食店等类型的客户。
-因为他们对Declicatessen和 Detergents_Paper的正向增长比较多，说明他的权重占比比较高，是到店消费和超市等类型的客户可能性比较大。</p>
+<p>第一个主成分：主要代表超市、餐饮类用户
+因为它的各方面消费情况都比较均衡，而且量也相对较大，可以猜测是超市、餐饮类的用户。</p>
+<p>第二个主成分：主要代表零售商类用户
+因为它的 Detergents_Paper 的权值为负的，说明是该分类清洁纸的消费要少，但是其他的量都还比较均衡，可以猜测是零售商类用户。</p>
+<p>第三个主成分：主要代表冷冻熟食店类用户
+因为它的 Fresh 品类的权值为负，说明该分类较少消费新鲜食物，但是 Declicatessen 品类权值很大，说明是做熟食销售的可能性很大，可以猜测是冷冻熟食店类用户。</p>
+<p>第三个主成分：主要代表新鲜熟食店类用户
+因为它的 Frozen 品类的权值为负，说明该分类较少消费冷冻食物，但是 Declicatessen 品类权值很大，说明是做熟食销售的可能性很大，可以猜测是新鲜熟食店类用户。</p>
 
 </div>
 </div>
@@ -21103,8 +21007,8 @@ DoUQAAAAgMKhEAIAAABQOP8foA6j9N4X1MEAAAAASUVORK5CYII=
 <p>1、用户每年采购的所有类型商品的总量：总量多标示用户的销售量大，可能是超市或餐饮行业。</p>
 <p>2、用户每年采购的清洁纸的数量：清洁纸少，说明不是超市或者餐饮行业，最可能是零售行业。</p>
 <p>所以我认为：</p>
-<p>Segment0 的客户分类，代表了零售类的客户。</p>
-<p>Segment0 的客户分类，代表了超市或者餐饮行业的客户。</p>
+<p>Segment0 的 Detergents_Paper 品类消费量 332.0 远小于之前统计特征 Detergents_Paper 的平均值 2881，而其他分类比较均衡，说明客户分类很可能代表了零售类的客户。</p>
+<p>Segment1 的 Detergents_Paper 品类消费量 4289.0 和之前统计特征 Detergents_Paper 的平均值 2881 在数量级上接近，并且其他品类消费量和之前统计的平均值接近，说明客户分类很可能代表了超市或者餐饮行业的客户。</p>
 
 </div>
 </div>
