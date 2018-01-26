@@ -12170,7 +12170,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12233,8 +12233,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
-<p>我尝试预测特征‘Detergents_Paper’，预测得分为0.85184
-我认为这个特征对于预测消费习惯来说很有必要，因为清洁纸的相对使用量，代表了是否有大量用户到店消费的需求，可以确定该用户是否很急迫的需要提供货物。</p>
+<p>我尝试预测特征‘Detergents_Paper’，预测得分为0.7846
+我认为这个特征对于预测消费习惯来说很有必要，因为之前对于清洁纸的预测r2得分为0.7846，比较接近1，说明用户购买清洁纸之后，我们可以对他购买其他产品有一定的预测，对于我们预测用户的消费习惯是很有用的，所以说该特征是必要的。</p>
 
 </div>
 </div>
@@ -20134,7 +20134,7 @@ uM9izHFveMUAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答:</strong></p>
 <p>使用KMeans的优点是计算简单，但是是硬分类，属于一个类就不能属于另一个类；高斯混合模型聚类的的优点是他是软聚类，专门针对那些符合多个高斯分布的样本。</p>
-<p>由于我们之前已经将数据调整为符合高斯分布的状态，于是我选择使用高斯混合模型聚类。</p>
+<p>由于高斯混合模型聚类方式是考虑了属于某个分类有一定的概率性，相对于 KMeans 而言保留了更多信息，虽然花费时间和算力更多，但是我认为是值得的，于是我选择使用高斯混合模型聚类。</p>
 
 </div>
 </div>
