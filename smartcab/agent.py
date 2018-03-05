@@ -3,6 +3,7 @@ import math
 from environment import Agent, Environment
 from planner import RoutePlanner
 from simulator import Simulator
+import math
 
 class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
@@ -39,7 +40,7 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
-        import math
+        
         self.train_t = self.train_t + 1
         # self.epsilon = math.cos(0.02*self.train_t)
         self.epsilon = math.e**(-0.01 * self.train_t)
@@ -96,12 +97,9 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-        if not self.Q.has_key(state):
-            dicActs = {}
-            for action in self.valid_actions:
-                dicActs[action] = 0.0
-            self.Q[state] = dicActs
-
+        if not self.Q.has_key(state) and self.learning:
+            self.Q.setdefault(state,{action:0.0 for action in self.valid_actions})
+            
         return
 
 

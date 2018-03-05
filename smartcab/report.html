@@ -11906,8 +11906,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong></p>
 <p>智能出租车没有移动。</p>
-<p>当出租车运行方向的交通信号灯变为红色的时候，奖励为负值。</p>
-<p>当出租车运行方向的交通信号灯变为绿色的时候，奖励为正值。</p>
+<p>由于出租车一直没有移动，分两种情况：</p>
+<p>红灯时候，没有移动正常，奖励为正数。</p>
+<p>绿灯时候，由于应该移动而没有移动，所以奖励是负数。</p>
 
 </div>
 </div>
@@ -11947,7 +11948,7 @@ div#notebook {
 <p>verbose：设置为True之后，控制台日志里会产生更多更详细的信息，如Step data等。</p>
 <p>num_dummies：模拟汽车的数量。</p>
 <p>grid_size：模拟城市的大小，即街区的数量。</p>
-<p>2、调用 step() 函数</p>
+<p>2、调用 act() 函数</p>
 <p>3、render_text代表用文字输出运行结果，render代表用pygame输出运行结果，通过simulator中的display来控制。</p>
 <p>4、next_waypoint先考虑南北方向，再考虑东西方向。</p>
 
@@ -13108,7 +13109,7 @@ ZmZmZlYlTrDMzMzMzMyqxAmWmZmZmZlZlTjBMjMzMzMzqxInWGZmZmZmZlXiBMvMzMzMzKxK/g+Z
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>答案：</strong></p>
-<p>1、有0.32-0.39的概率作出不良决策。在不良决策中，有4.12%的概率导致事故。</p>
+<p>1、有32%-39%的概率作出不良决策。在不良决策中，有25%的概率导致事故。</p>
 <p>2、可靠率并不合理，作出不良决策的概率太高了。</p>
 <p>3、平均下来，行动带来的奖励都是负数，说明受到了惩罚。</p>
 <p>4、由于是随机的，所以实验数量增加对结果也没有帮助。</p>
@@ -13167,7 +13168,10 @@ ZmZmZlYlTrDMzMzMzMyqxAmWmZmZmZlZlTjBMjMzMzMzqxInWGZmZmZmZlXiBMvMzMzMzKxK/g+Z
 <p><strong>回答：</strong></p>
 <p>与安全性相关最高的是：light、left、right、oncoming。因为路上安全因素主要就靠红绿灯，以及其他方向车辆的行驶状况决定。</p>
 <p>与效率相关最高的是：next_waypoint。表示我应该去的方向，随着这个方向行驶，我们才能最快的到达目的地。</p>
-<p>不选择deadline的原因，主要是剩余步数对于Q没有奖励惩罚作用，并且加上之后，会导致整个状态空间变得很大。</p>
+<p>deadline加上之后，有两方面的影响：</p>
+<p>1、状态空间由 3$\times$2$\times$4$\times$4$\times$4=384 会增大一个数量级，覆盖所有状态比较困难。</p>
+<p>2、由于出发地和目的地不停变化，所以这个deadline不能做到奖励和惩罚的传导性。</p>
+<p>所以不选择deadline的原因，主要是剩余步数对于Q没有奖励惩罚作用，并且加上之后，会导致整个状态空间变得很大。</p>
 
 </div>
 </div>
@@ -13200,9 +13204,23 @@ ZmZmZlYlTrDMzMzMzMyqxAmWmZmZmZlZlTjBMjMzMzMzqxInWGZmZmZmZlXiBMvMzMzMzKxK/g+Z
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答：</strong>
-状态空间的大小为：5^5=3125。</p>
-<p>由于状态控件数量巨大，很可能对于一部分状态没办法学习到正确的决策。</p>
+<p><strong>回答：</strong></p>
+<p>状态空间的大小为：</p>
+<p>waypoint:3,light:2,left:4,right:4,oncoming:4</p>
+<p>3$\times$2$\times$4$\times$4$\times$4=384</p>
+<p>加上下一步动作之后，状态空间大小达到了 384$\times$4=1536</p>
+<p>由于状态控件数量巨大，一个状态可能要多次训练才能得到最优结果，并且越往后遇到新场景的机会越少，所以很可能对于一部分状态没办法学习到正确的决策，但是大部分还是可以被学习到的。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>随机选择最大action</strong></p>
+<p>主要原因是，总是挑选第一个最大的，会导致本应该增加其他项的Q值错误的被加到了第一个项上，从而最终导致错误的判断，影响最后的结果。</p>
 
 </div>
 </div>
@@ -16434,12 +16452,14 @@ zjnnnHPOOVci/w9yR9yP4pB39AAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong></p>
-<p>使用了 ϵ=e−at的衰减函数。</p>
-<p>测试之前大约进行了225次训练试验。</p>
-<p>epsilon-tolerance=0.1、alpha=0.5。</p>
-<p>改进很大，安全性有所提升。</p>
-<p>目前看Q-Learning学习器表明了代理驾驶程序学习到了合适的策略，因为目前的安全性和可靠性得分都比较高。</p>
-<p>比较满意，不过有机会最好能提升到双 A+。</p>
+<p>1、使用了 ϵ=e−at的衰减函数。</p>
+<p>2、测试之前大约进行了225次训练试验。</p>
+<p>3、epsilon-tolerance=0.1、alpha=0.5。</p>
+<p>epsilon-tolerance：决定了训练次数的多少，我们当然希望以少的时间获得满意的结果，所以需要控制epsilon-tolerance参数，因为我发现当epsilon-tolerance达到0.1的时候，结果已经足够好了，所以没有必要进行更多训练，所以选择0.1。</p>
+<p>alpha：决定了构建 Q矩阵 过程中，是利用旧经验多，还是学习新知识多。当为0.5的时候，能够平衡两者的比例，既能更多的利用已有的经验，又能学习新知识，所以我选择0.5。</p>
+<p>4、改进很大，安全性有所提升。</p>
+<p>5、目前看Q-Learning学习器表明了代理驾驶程序学习到了合适的策略，因为目前的安全性和可靠性得分都比较高。</p>
+<p>6、比较满意，不过有机会最好能提升到双 A+。</p>
 
 </div>
 </div>
@@ -16470,17 +16490,33 @@ zjnnnHPOOVci/w9yR9yP4pB39AAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>回答：</strong></p>
-<p><strong>最优策略：</strong></p>
+<p><strong>我判定的的最优策略：</strong></p>
 <p>light:Red =&gt; action:None</p>
 <p>next_waypoint:forward,light:green,oncoming:left =&gt;action:None</p>
 <p>next_waypoint:left,light:green,oncoming:forward =&gt;action:None</p>
-<p><strong>有一种状态与我之前认为的状态最优动作不同：</strong></p>
+<p>next_waypoint:left,light:red,oncoming:left =&gt;action:None</p>
+<p>next_waypoint:left,light:green,oncoming:None =&gt;action:left</p>
+<p><strong>观察Q矩阵之后发现，有一种状态与我之前认为的状态最优动作不同，其他的都是正确的：</strong></p>
 <p>('forward', 'green', None, 'forward', 'left')
  -- forward : 0.00
  -- None : 0.37
  -- right : 0.00
  -- left : 1.01</p>
 <p>这个状态是说在应该往前走最快到达目的地的时候，如果不能往前，可以先往左，迂回过去，可以想成是我们平时遇到堵车的时候，选择其他小路更快的到达目的地，所以这个策略是正确的。</p>
+<hr>
+<p>('left', 'red', 'left', None, 'left')
+ -- forward : -7.01
+ -- None : 2.00
+ -- right : 0.50
+ -- left : -7.59</p>
+<p>当应该左转的时候，遇到红的，最佳的动作应该是停下来，其次由于左侧车是左转，所以出租车非得要走，应该也是右转以避免与其相撞。另外两种都是不可取的，不仅违规，并且还会导致交通事故。</p>
+<hr>
+<p>('left', 'green', 'left', None, None)
+ -- forward : -0.09
+ -- None : -4.65
+ -- right : 1.12
+ -- left : 2.10</p>
+<p>此时出租车应该是左转，并且也是绿灯，对向车道没有车，这个时候所有的动作都是可以选择的，但是最好的还是目的方向--左转，最不应该的就是待在原地，这样是浪费时间。</p>
 
 </div>
 </div>
