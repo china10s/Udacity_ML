@@ -6,7 +6,7 @@
 # ## Get the Data
 # Run the following cell to download the [CIFAR-10 dataset for python](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz).
 
-# In[1]:
+# In[6]:
 
 
 """
@@ -68,7 +68,7 @@ tests.test_folder_path(cifar10_dataset_folder_path)
 # 
 # Ask yourself "What are all possible labels?", "What is the range of values for the image data?", "Are the labels in order or random?".  Answers to questions like these will help you preprocess the data and end up with better predictions.
 
-# In[2]:
+# In[7]:
 
 
 get_ipython().magic('matplotlib inline')
@@ -87,7 +87,7 @@ helper.display_stats(cifar10_dataset_folder_path, batch_id, sample_id)
 # ### Normalize
 # In the cell below, implement the `normalize` function to take in image data, `x`, and return it as a normalized Numpy array. The values should be in the range of 0 to 1, inclusive.  The return object should be the same shape as `x`.
 
-# In[3]:
+# In[8]:
 
 
 def normalize(x):
@@ -117,7 +117,7 @@ tests.test_normalize(normalize)
 # 
 # Hint: Don't reinvent the wheel.
 
-# In[4]:
+# In[9]:
 
 
 def one_hot_encode(x):
@@ -147,7 +147,7 @@ tests.test_one_hot_encode(one_hot_encode)
 # ## Preprocess all the data and save it
 # Running the code cell below will preprocess all the CIFAR-10 data and save it to file. The code below also uses 10% of the training data for validation.
 
-# In[5]:
+# In[10]:
 
 
 """
@@ -160,7 +160,7 @@ helper.preprocess_and_save_data(cifar10_dataset_folder_path, normalize, one_hot_
 # # Check Point
 # This is your first checkpoint.  If you ever decide to come back to this notebook or have to restart the notebook, you can start from here.  The preprocessed data has been saved to disk.
 
-# In[8]:
+# In[1]:
 
 
 """
@@ -201,7 +201,7 @@ valid_features, valid_labels = pickle.load(open('preprocess_validation.p', mode=
 # 
 # Note: `None` for shapes in TensorFlow allow for a dynamic size.
 
-# In[9]:
+# In[2]:
 
 
 import tensorflow as tf
@@ -261,7 +261,7 @@ tests.test_nn_keep_prob_inputs(neural_net_keep_prob_input)
 # 
 # **Note:** You **can't** use [TensorFlow Layers](https://www.tensorflow.org/api_docs/python/tf/layers) or [TensorFlow Layers (contrib)](https://www.tensorflow.org/api_guides/python/contrib.layers) for **this** layer, but you can still use TensorFlow's [Neural Network](https://www.tensorflow.org/api_docs/python/tf/nn) package. You may still use the shortcut option for all the **other** layers.
 
-# In[10]:
+# In[3]:
 
 
 def conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ksize, pool_strides):
@@ -299,7 +299,7 @@ tests.test_con_pool(conv2d_maxpool)
 # ### Flatten Layer
 # Implement the `flatten` function to change the dimension of `x_tensor` from a 4-D tensor to a 2-D tensor.  The output should be the shape (*Batch Size*, *Flattened Image Size*). Shortcut option: you can use classes from the [TensorFlow Layers](https://www.tensorflow.org/api_docs/python/tf/layers) or [TensorFlow Layers (contrib)](https://www.tensorflow.org/api_guides/python/contrib.layers) packages for this layer. For more of a challenge, only use other TensorFlow packages.
 
-# In[11]:
+# In[4]:
 
 
 def flatten(x_tensor):
@@ -321,7 +321,7 @@ tests.test_flatten(flatten)
 # ### Fully-Connected Layer
 # Implement the `fully_conn` function to apply a fully connected layer to `x_tensor` with the shape (*Batch Size*, *num_outputs*). Shortcut option: you can use classes from the [TensorFlow Layers](https://www.tensorflow.org/api_docs/python/tf/layers) or [TensorFlow Layers (contrib)](https://www.tensorflow.org/api_guides/python/contrib.layers) packages for this layer. For more of a challenge, only use other TensorFlow packages.
 
-# In[12]:
+# In[5]:
 
 
 def fully_conn(x_tensor, num_outputs):
@@ -347,7 +347,7 @@ tests.test_fully_conn(fully_conn)
 # 
 # **Note:** Activation, softmax, or cross entropy should **not** be applied to this.
 
-# In[13]:
+# In[6]:
 
 
 def output(x_tensor, num_outputs):
@@ -383,7 +383,7 @@ tests.test_output(output)
 # * Return the output
 # * Apply [TensorFlow's Dropout](https://www.tensorflow.org/api_docs/python/tf/nn/dropout) to one or more layers in the model using `keep_prob`. 
 
-# In[14]:
+# In[7]:
 
 
 def conv_net(x, keep_prob):
@@ -397,24 +397,23 @@ def conv_net(x, keep_prob):
     #    Play around with different number of outputs, kernel size and stride
     # Function Definition from Above:
     #    conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ksize, pool_strides)
-    conv1 = conv2d_maxpool(x,18,(4,4),(1,1),(8,8),(1,1))
-    conv2 = conv2d_maxpool(conv1,36,(4,4),(1,1),(8,8),(1,1))
-#     conv3 = conv2d_maxpool(conv2,1024,(2,2),(2,2),(2,2),(2,2))
-    dropout1 = tf.nn.dropout(conv2,keep_prob)
+    conv1 = conv2d_maxpool(x,64,(3,3),(1,1),(2,2),(2,2))
+    conv2 = conv2d_maxpool(conv1,128,(3,3),(1,1),(2,2),(2,2))
+    conv3 = conv2d_maxpool(conv2,256,(3,3),(1,1),(2,2),(2,2))
 
     # TODO: Apply a Flatten Layer
     # Function Definition from Above:
     #   flatten(x_tensor)
-    flat1 = flatten(dropout1)
+    flat1 = flatten(conv3)
 
     # TODO: Apply 1, 2, or 3 Fully Connected Layers
     #    Play around with different number of outputs
     # Function Definition from Above:
     #   fully_conn(x_tensor, num_outputs)
-    fully1 = fully_conn(flat1,248)
-    fully2 = fully_conn(fully1,648)
-#     fully3 = fully_conn(fully2,2048)
-    dropout2 = tf.nn.dropout(fully2,keep_prob)
+    fully1 = fully_conn(flat1,512)
+    fully2 = fully_conn(fully1,256)
+    fully3 = fully_conn(fully2,128)
+    dropout2 = tf.nn.dropout(fully3,keep_prob)
     
     # TODO: Apply an Output Layer
     #    Set this to the number of classes
@@ -470,7 +469,7 @@ tests.test_conv_net(conv_net)
 # 
 # Note: Nothing needs to be returned. This function is only optimizing the neural network.
 
-# In[15]:
+# In[8]:
 
 
 def train_neural_network(session, optimizer, keep_probability, feature_batch, label_batch):
@@ -496,7 +495,7 @@ tests.test_train_nn(train_neural_network)
 # ### Show Stats
 # Implement the function `print_stats` to print loss and validation accuracy.  Use the global variables `valid_features` and `valid_labels` to calculate validation accuracy.  Use a keep probability of `1.0` to calculate the loss and validation accuracy.
 
-# In[16]:
+# In[9]:
 
 
 def print_stats(session, feature_batch, label_batch, cost, accuracy):
@@ -526,19 +525,19 @@ def print_stats(session, feature_batch, label_batch, cost, accuracy):
 #  * ...
 # * Set `keep_probability` to the probability of keeping a node using dropout
 
-# In[19]:
+# In[10]:
 
 
 # TODO: Tune Parameters
 epochs = 10
 batch_size = 512
-keep_probability = 1
+keep_probability = 0.7
 
 
 # ### Train on a Single CIFAR-10 Batch
 # Instead of training the neural network on all the CIFAR-10 batches of data, let's use a single batch. This should save time while you iterate on the model to get a better accuracy.  Once the final validation accuracy is 50% or greater, run the model on all the data in the next section.
 
-# In[20]:
+# In[11]:
 
 
 """
@@ -561,7 +560,7 @@ with tf.Session() as sess:
 # ### Fully Train the Model
 # Now that you got a good accuracy with a single CIFAR-10 batch, try it with all five batches.
 
-# In[21]:
+# In[12]:
 
 
 """
@@ -594,7 +593,7 @@ with tf.Session() as sess:
 # ## Test Model
 # Test your model against the test dataset.  This will be your final accuracy. You should have an accuracy greater than 50%. If you don't, keep tweaking the model architecture and parameters.
 
-# In[22]:
+# In[13]:
 
 
 """
@@ -666,6 +665,12 @@ test_model()
 # You might be wondering why you can't get an accuracy any higher. First things first, 50% isn't bad for a simple CNN.  Pure guessing would get you 10% accuracy. However, you might notice people are getting scores [well above 70%](http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130).  That's because we haven't taught you all there is to know about neural networks. We still need to cover a few more techniques.
 # ## Submitting This Project
 # When submitting this project, make sure to run all the cells before saving the notebook.  Save the notebook file as "dlnd_image_classification.ipynb" and save it as a HTML file under "File" -> "Download as".  Include the "helper.py" and "problem_unittests.py" files in your submission.
+
+# In[19]:
+
+
+get_ipython().system('ls -l')
+
 
 # In[ ]:
 
